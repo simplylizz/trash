@@ -1,0 +1,63 @@
+*.class
+
+# Intellij IDEA project files
+*.iml
+.idea/
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# gradle
+build/
+.gradle/
+
+# python
+__pycache__
+*.pyc
+.cache
+*.mo  # compiled translations
+
+# vim
+*.swp
+*.swo
+
+# eclipse
+.classpath
+.project
+.settings/
+
+# test reports
+testreport/*
+*.result.json
+test/report.tar.gz
+test/result.json
+test/testreport/
+test/testresult/
+
+.tox/
+
+#ansible
+*.retry
+
+*.iws
+*.ipr
+
+bin/
+out/
+
+.vscode
+.ropeproject
+
+.python-version
+
+.DS_Store
+
+db.sqlite3
