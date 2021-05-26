@@ -1,0 +1,27 @@
+services:
+  db:
+    image: "postgres:13.3-alpine"
+    restart: "always"
+    volumes:
+      - "./database:/var/lib/postgresql/data"
+    ports:
+      - "15432:5432"
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+  pyspark:
+    build:
+      context: pyspark
+    restart: "always"
+    volumes:
+      - "./pyspark:/pyspark"
+    working_dir: "/pyspark"
+    command: >
+      sh -c "
+        echo 'started' &&
+        sleep infinity
+      "
+    # next two options required for pdb
+    stdin_open: true
+    tty: true
+    links:
+      - "db"
