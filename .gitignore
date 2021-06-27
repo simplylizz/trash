@@ -61,3 +61,5 @@ out/
 .DS_Store
 
 db.sqlite3
+
+target/
